@@ -47,6 +47,9 @@ class DriverSafetyModule(reactContext: ReactApplicationContext) : ReactContextBa
     }
 
     fun disableSDK() {
-        TrackingApi.getInstance().setEnableSdk(false)
+        val api = TrackingApi.getInstance()
+        
+        api.setEnableSdk(false)
+        api.clearDeviceID();
     }
 }
