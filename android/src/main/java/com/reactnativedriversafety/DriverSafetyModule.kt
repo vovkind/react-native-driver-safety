@@ -4,6 +4,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
+import android.content.Context
 import com.raxeltelematics.v2.sdk.TrackingApi
 
 class DriverSafetyModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
@@ -19,6 +20,18 @@ class DriverSafetyModule(reactContext: ReactApplicationContext) : ReactContextBa
         promise.resolve(a * b)
     }
 
+    fun initialize(){
+        val settings = Settings(
+            isSensorFull = true,
+            stopTrackingTimeout = Settings.stopTrackingTimeHigh,
+            accuracy = Settings.accuracyHigh,
+            autoStartOn = true
+        )
+        val api = TrackingApi.getInstance()
+
+        api.initialize(this.getReactApplicationContext(), settings)
+    }
+
     @ReactMethod
     fun enable(deviceId: String) {
         enableSDK(deviceId)
@@ -30,11 +43,13 @@ class DriverSafetyModule(reactContext: ReactApplicationContext) : ReactContextBa
     }
 
     fun enableSDK(deviceId: String) {
-      TrackingApi.getInstance().setDeviceID(deviceId)
-      TrackingApi.getInstance().setEnableSdk(true)
+        val api = TrackingApi.getInstance()
+        
+        api.setDeviceID(deviceId)
+        api.setEnableSdk(true)
     }
 
     fun disableSDK() {
-      TrackingApi.getInstance().setEnableSdk(false)
+        TrackingApi.getInstance().setEnableSdk(false)
     }
 }
