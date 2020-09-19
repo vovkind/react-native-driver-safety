@@ -14,23 +14,19 @@ class DriverSafetyModule(reactContext: ReactApplicationContext) : ReactContextBa
         return "DriverSafety"
     }
 
-    // Example method
-    // See https://facebook.github.io/react-native/docs/native-modules-android
-    @ReactMethod
-    fun multiply(a: Int, b: Int, promise: Promise) {
-        promise.resolve(a * b)
-    }
+    companion object {
+        @JvmStatic
+        fun init(context: Context){
+            val settings = Settings(
+                isSensorFull = true,
+                stopTrackingTimeout = Settings.stopTrackingTimeHigh,
+                accuracy = Settings.accuracyHigh,
+                autoStartOn = true
+            )
+            val api = TrackingApi.getInstance()
 
-    fun init(context: Context){
-        val settings = Settings(
-            isSensorFull = true,
-            stopTrackingTimeout = Settings.stopTrackingTimeHigh,
-            accuracy = Settings.accuracyHigh,
-            autoStartOn = true
-        )
-        val api = TrackingApi.getInstance()
-
-        api.initialize(context, settings)
+            api.initialize(context, settings)
+        }
     }
 
     @ReactMethod

@@ -15,7 +15,7 @@ import DriverSafety from "react-native-driver-safety";
 
 // ...
 
-const result = await DriverSafety.multiply(3, 7);
+//TBD
 ```
 
 ## Contributing
