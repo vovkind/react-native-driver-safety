@@ -4,7 +4,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
-import android.content.Context
+import com.raxeltelematics.v2.sdk.Settings
 import com.raxeltelematics.v2.sdk.TrackingApi
 
 class DriverSafetyModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
@@ -20,7 +20,7 @@ class DriverSafetyModule(reactContext: ReactApplicationContext) : ReactContextBa
         promise.resolve(a * b)
     }
 
-    fun initialize(){
+    fun init(){
         val settings = Settings(
             isSensorFull = true,
             stopTrackingTimeout = Settings.stopTrackingTimeHigh,
