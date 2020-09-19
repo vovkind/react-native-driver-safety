@@ -1,5 +1,6 @@
 package com.reactnativedriversafety
 
+import android.content.Context
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
@@ -20,7 +21,7 @@ class DriverSafetyModule(reactContext: ReactApplicationContext) : ReactContextBa
         promise.resolve(a * b)
     }
 
-    fun init(){
+    fun init(context: Context){
         val settings = Settings(
             isSensorFull = true,
             stopTrackingTimeout = Settings.stopTrackingTimeHigh,
@@ -29,7 +30,7 @@ class DriverSafetyModule(reactContext: ReactApplicationContext) : ReactContextBa
         )
         val api = TrackingApi.getInstance()
 
-        api.initialize(this.getReactApplicationContext(), settings)
+        api.initialize(context, settings)
     }
 
     @ReactMethod
