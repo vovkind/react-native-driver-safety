@@ -26,7 +26,7 @@ class DriverSafetyModule(reactContext: ReactApplicationContext) : ReactContextBa
             * hfOn - true if HIGH FREQUENCY data record from sensors (acc, gyro) is ON and false if is OFF.
             * isElmOn - true if data record from ELM327 devices is ON and false if is OFF.
             */
-            val settings = Settings(true, Settings.stopTrackingTimeHigh, Settings.accuracyHigh, true, true, true)
+            val settings = Settings(true, Settings.stopTrackingTimeHigh, Settings.accuracyHigh, true, true, false)
             val api = TrackingApi.getInstance()
 
             api.initialize(context, settings)
