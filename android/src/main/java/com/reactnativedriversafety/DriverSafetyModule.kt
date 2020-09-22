@@ -17,12 +17,16 @@ class DriverSafetyModule(reactContext: ReactApplicationContext) : ReactContextBa
     companion object {
         @JvmStatic
         fun init(context: Context){
-            val settings = Settings(
-                isSensorFull = true,
-                stopTrackingTimeout = Settings.stopTrackingTimeHigh,
-                accuracy = Settings.accuracyHigh,
-                autoStartOn = true
-            )
+            /**
+            * Default Setting constructor
+            * IsSensorFull - true
+            * Stop tracking time is 5 minute.
+            * Parking radius is 100 meters.
+            * Auto start tracking is true.
+            * hfOn - true if HIGH FREQUENCY data record from sensors (acc, gyro) is ON and false if is OFF.
+            * isElmOn - true if data record from ELM327 devices is ON and false if is OFF.
+            */
+            val settings = Settings(true, Settings.stopTrackingTimeHigh, Settings.accuracyHigh, true, true, true)
             val api = TrackingApi.getInstance()
 
             api.initialize(context, settings)
