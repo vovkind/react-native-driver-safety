@@ -131,5 +131,5 @@ dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  implementation "com.telematicssdk:tracking:2.0.58"
+  implementation "com.telematicssdk:tracking:2.2.222"
 }
