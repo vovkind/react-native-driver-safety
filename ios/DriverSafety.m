@@ -3,11 +3,11 @@
 
 @implementation DriverSafety
 
-RCT_EXPORT_MODULE()
+RCT_EXPORT_MODULE(DriverSafety)
 
 // Example method
 // See // https://facebook.github.io/react-native/docs/native-modules-ios
-RCT_REMAP_METHOD(multiply,
+/*RCT_REMAP_METHOD(multiply,
                  multiplyWithA:(nonnull NSNumber*)a withB:(nonnull NSNumber*)b
                  withResolver:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
@@ -15,7 +15,7 @@ RCT_REMAP_METHOD(multiply,
   NSNumber *result = @([a floatValue] * [b floatValue]);
 
   resolve(result);
-}
+}*/
 
 RCT_EXPORT_METHOD(enable:(NSString *)token) {
   dispatch_async(dispatch_get_main_queue(), ^{
