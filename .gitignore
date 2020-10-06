@@ -9,9 +9,6 @@
 *.ap_
 *.aab
 
-### iOS ###
-ios/Pods/
-
 # Files for the ART/Dalvik VM
 *.dex
 
