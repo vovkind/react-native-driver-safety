@@ -1,5 +1,5 @@
 #import "DriverSafety.h"
-#import <RaxelPulse/RaxelPulse.h>
+#import "Pods/RaxelPulse/RaxelPulse.framework/Headers/RaxelPulse.h"
 
 @implementation DriverSafety
 
