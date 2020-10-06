@@ -1,4 +1,5 @@
 #import "DriverSafety.h"
+#import <RaxelPulse/RPEntry.h>
 
 @implementation DriverSafety
 
@@ -14,6 +15,13 @@ RCT_REMAP_METHOD(multiply,
   NSNumber *result = @([a floatValue] * [b floatValue]);
 
   resolve(result);
+}
+
+RCT_EXPORT_METHOD(enable:(NSString *)token) {
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [RPEntry instance].virtualDeviceToken = @"DeviceToken";
+    [RPEntry instance].disableTracking = NO;
+  });
 }
 
 @end
