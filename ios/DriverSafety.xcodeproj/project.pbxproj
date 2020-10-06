@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* DriverSafety.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* DriverSafety.mm */; };
+		5E555C0D2413F4C50049A1A2 /* DriverSafety.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* DriverSafety.m */; };
 		D576F9ED64CAEC5A6C906661 /* Pods_DriverSafety.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A038FB2084D4CC497A75C59 /* Pods_DriverSafety.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		6A038FB2084D4CC497A75C59 /* Pods_DriverSafety.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriverSafety.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE855B0C2ED1251E8757ECF /* Pods-DriverSafety.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriverSafety.debug.xcconfig"; path = "Target Support Files/Pods-DriverSafety/Pods-DriverSafety.debug.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* DriverSafety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverSafety.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* DriverSafety.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DriverSafety.mm; sourceTree = "<group>"; };
+		B3E7B5891CC2AC0600A0062D /* DriverSafety.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverSafety.m; sourceTree = "<group>"; };
 		B92DC5030201DB507855C898 /* Pods-DriverSafety.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriverSafety.release.xcconfig"; path = "Target Support Files/Pods-DriverSafety/Pods-DriverSafety.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				B3E7B5881CC2AC0600A0062D /* DriverSafety.h */,
-				B3E7B5891CC2AC0600A0062D /* DriverSafety.mm */,
+				B3E7B5891CC2AC0600A0062D /* DriverSafety.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				34CFB1300B5CA93E5A336D48 /* Pods */,
 				3CD7EF842F8DEFB34DB238D3 /* Frameworks */,
@@ -163,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E555C0D2413F4C50049A1A2 /* DriverSafety.mm in Sources */,
+				5E555C0D2413F4C50049A1A2 /* DriverSafety.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
