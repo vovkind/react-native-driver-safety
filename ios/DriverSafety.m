@@ -19,7 +19,7 @@ RCT_EXPORT_MODULE(DriverSafety)
 
 RCT_EXPORT_METHOD(enable:(NSString *)token) {
   dispatch_async(dispatch_get_main_queue(), ^{
-    [RPEntry instance].virtualDeviceToken = @"DeviceToken";
+    [RPEntry instance].virtualDeviceToken = token;
     [RPEntry instance].disableTracking = NO;
   });
 }
